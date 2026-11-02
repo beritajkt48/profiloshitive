@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OSHITIVE – Sosial Media Resmi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#0b0b0d;--muted:#5d6270;--card:#f4f6fb;--line:#e3e7f0;--brand:#4262b2;--brand-fg:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0d;--fg:#f5f6fa;--muted:#a0a6b5;--card:#16171c;--line:#262832;--brand:#6b8ae0;--brand-fg:#0b0b0d}}
+:root[data-theme="dark"]{--bg:#0b0b0d;--fg:#f5f6fa;--muted:#a0a6b5;--card:#16171c;--line:#262832;--brand:#6b8ae0;--brand-fg:#0b0b0d}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:20px 20px 28px}
+.top{display:flex;justify-content:flex-end;margin-bottom:12px}
+.lang{display:inline-flex;padding:3px;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+.lang button{font:600 12px 'Poppins',system-ui,sans-serif;padding:6px 14px;border:0;border-radius:99px;background:transparent;color:var(--muted);cursor:pointer;min-height:32px}
+.lang button[aria-pressed="true"]{background:var(--brand);color:var(--brand-fg)}
+.lang button:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.hero{text-align:center;margin-bottom:28px}
+.logo{width:84px;height:84px;margin:0 auto 16px;border-radius:24px;background:var(--brand);color:var(--brand-fg);display:grid;place-items:center;font-weight:800;font-size:34px;letter-spacing:-1px}
+h1{margin:0;font-size:30px;font-weight:800;letter-spacing:-.5px}
+h1 span{color:var(--brand)}
+.tag{margin:10px auto 0;max-width:480px;color:var(--muted);font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.chips b{font-weight:500;font-size:12px;padding:4px 12px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.list{display:grid;gap:12px}
+a.item{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:18px;color:inherit;text-decoration:none;transition:transform .15s,border-color .15s}
+a.item:hover,a.item:focus-visible{transform:translateY(-2px);border-color:var(--brand);outline:none}
+.ico{flex:none;width:46px;height:46px;border-radius:14px;background:var(--fg);color:var(--bg);display:grid;place-items:center}
+.ico svg{width:24px;height:24px;fill:currentColor}
+.item.main .ico{background:var(--brand);color:var(--brand-fg)}
+.txt{min-width:0;flex:1}
+.txt strong{display:block;font-size:15px;font-weight:600}
+.txt small{display:block;color:var(--muted);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arr{color:var(--muted);font-size:18px}
+.coop{margin-top:24px;padding:20px;border-radius:20px;background:var(--brand);color:var(--brand-fg)}
+.coop h2{margin:0 0 6px;font-size:17px;font-weight:700}
+.coop p{margin:0;font-size:13.5px;opacity:.95}
+.coop a{display:inline-block;margin-top:14px;padding:9px 18px;border-radius:99px;background:var(--bg);color:var(--fg);font-weight:600;font-size:13.5px;text-decoration:none}
+footer{margin-top:32px;text-align:center;color:var(--muted);font-size:12px}
+footer p{margin:4px 0}
+/* Tablet */
+@media (min-width:700px){.wrap{max-width:760px;padding:28px 32px 36px}.list{grid-template-columns:1fr 1fr}h1{font-size:36px}.tag{font-size:15.5px}}
+/* Desktop: hero kiri, link kanan */
+@media (min-width:1000px){
+  .wrap{max-width:1100px;padding:32px 48px 40px}
+  .layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:start;min-height:calc(100vh - 170px);align-content:center}
+  .hero{text-align:left;margin:0;position:sticky;top:40px}
+  .logo{margin:0 0 20px;width:96px;height:96px;font-size:38px}
+  h1{font-size:46px}
+  .tag{margin-left:0;max-width:420px;font-size:16px}
+  .chips{justify-content:flex-start}
+  .list{grid-template-columns:1fr}
+  .coop{margin-top:16px}
+}
+@media (max-width:380px){h1{font-size:26px}.ico{width:42px;height:42px}.txt strong{font-size:14px}}
+@media (prefers-reduced-motion:reduce){a.item{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <div class="lang" role="group" aria-label="Language / Bahasa">
+      <button type="button" data-lang="id" aria-pressed="true">ID</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <header class="hero">
+      <div class="logo">O+</div>
+      <h1>OSHITIVE<span>+</span></h1>
+      <p class="tag" data-i18n="tag"></p>
+      <div class="chips"><b data-i18n="c1"></b><b data-i18n="c2"></b><b>JKT48</b><b data-i18n="c4"></b></div>
+    </header>
+
+    <div>
+      <nav class="list" aria-label="OSHITIVE">
+        <a class="item main" href="https://oshitive.com" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1 1.200 2 3.500 2.200 7H9.800C10 7.500 11 5.200 12 4zM4.100 11a8 8 0 014.300-6.200A16 16 0 007.800 11H4.100zm0 2h3.700c.1 2.200.7 4.300 1.600 6.200A8 8 0 014.100 13zM12 20c-1-1.200-2-3.500-2.200-7h4.400C14 16.500 13 18.800 12 20zm2.600-.8c.9-1.900 1.500-4 1.600-6.200h3.700a8 8 0 01-5.300 6.200zM16.200 11a16 16 0 00-.6-6.200A8 8 0 0119.900 11h-3.700z"/></svg></span>
+          <span class="txt"><strong data-i18n="n_web"></strong><small>oshitive.com</small></span><span class="arr">→</span>
+        </a>
+        <a class="item" href="https://whatsapp.com/channel/0029Vae5cgVBqbr0mRzNvA3c" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.300 14.100c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.200-.7-2.700-1.100-4.400-3.800-4.500-4-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.9 2.100c.1.200.1.400 0 .5l-.3.500-.4.400c-.1.200-.3.300-.1.600.2.300.7 1.200 1.500 1.900 1 .9 1.900 1.200 2.200 1.300.3.100.4.100.6-.1l.8-1c.2-.2.400-.2.600-.1l2 1c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"/></svg></span>
+          <span class="txt"><strong data-i18n="n_wa"></strong><small data-i18n="s_wa"></small></span><span class="arr">→</span>
+        </a>
+        <a class="item" href="https://www.tiktok.com/@oshitive" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M16.600 2h-3.200v13.200a2.900 2.900 0 11-2.900-2.900c.3 0 .6 0 .9.100V9.100a6.100 6.100 0 106.200 6.100V8.800a7.800 7.800 0 004.400 1.400V7a4.700 4.700 0 01-3.400-5z"/></svg></span>
+          <span class="txt"><strong>TikTok</strong><small>@oshitive</small></span><span class="arr">→</span>
+        </a>
+        <a class="item" href="https://www.instagram.com/oshitive/" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M7.800 2h8.400A5.800 5.800 0 0122 7.800v8.400a5.800 5.800 0 01-5.800 5.800H7.800A5.800 5.800 0 012 16.200V7.800A5.800 5.800 0 017.800 2zm-.2 2A3.600 3.600 0 004 7.600v8.800A3.600 3.600 0 007.600 20h8.800a3.600 3.600 0 003.600-3.600V7.600A3.600 3.600 0 0016.400 4H7.600zm9.700 1.500a1.200 1.200 0 110 2.400 1.200 1.200 0 010-2.400zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></span>
+          <span class="txt"><strong>Instagram</strong><small>@oshitive</small></span><span class="arr">→</span>
+        </a>
+        <a class="item" href="https://x.com/oshitivee" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M17.800 3h3.100l-6.800 7.700L22 21h-6.200l-4.900-6.400L5.300 21H2.200l7.200-8.300L1.800 3h6.400l4.400 5.800L17.800 3zm-1.100 16.200h1.700L7.200 4.700H5.400l11.300 14.500z"/></svg></span>
+          <span class="txt"><strong>X / Twitter</strong><small>@oshitivee</small></span><span class="arr">→</span>
+        </a>
+        <a class="item" href="mailto:oshitive@gmail.com">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.5l8 5 8-5V6H4zm16 3-8 5-8-5V18h16V9z"/></svg></span>
+          <span class="txt"><strong>Email</strong><small>oshitive@gmail.com</small></span><span class="arr">→</span>
+        </a>
+      </nav>
+
+      <section class="coop">
+        <h2 data-i18n="coop_h"></h2>
+        <p data-i18n="coop_p"></p>
+        <a id="coopBtn" href="#" data-i18n="coop_b"></a>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <p data-i18n-html="foot"></p>
+    <p>© <span id="y">2026</span> OSHITIVE+</p>
+  </footer>
+</main>
+<script>
+var T={
+ id:{title:"OSHITIVE – Sosial Media Resmi",
+  tag:"Platform media, komunitas, dan kanal konten kreatif seputar musik, budaya pop, dan dunia idola, terutama JKT48 serta perkembangan idol grup lokal.",
+  c1:"Musik",c2:"Budaya Pop",c4:"Idol Lokal",
+  n_web:"Website Berita",n_wa:"Saluran WhatsApp",s_wa:"Update berita langsung ke WhatsApp-mu",
+  coop_h:"Kerja Sama",
+  coop_p:"Untuk segala bentuk kerja sama, silakan hubungi kami melalui email atau media sosial resmi OSHITIVE. Respons lebih cepat melalui email dan TikTok.",
+  coop_b:"Hubungi via Email",subj:"Kerja Sama OSHITIVE",
+  foot:"Situs ini dikelola secara independen oleh OSHITIVE+ Editorial Team,<br>tim media kreatif berbasis di Indonesia."},
+ en:{title:"OSHITIVE – Official Social Media",
+  tag:"A media platform, community, and creative content channel focused on music, pop culture, and the idol world, especially JKT48 and the growth of local idol groups.",
+  c1:"Music",c2:"Pop Culture",c4:"Local Idols",
+  n_web:"News Website",n_wa:"WhatsApp Channel",s_wa:"Get news updates straight on WhatsApp",
+  coop_h:"Collaboration",
+  coop_p:"For any kind of collaboration, please contact us via email or OSHITIVE’s official social media. We respond faster through email and TikTok.",
+  coop_b:"Contact via Email",subj:"OSHITIVE Collaboration",
+  foot:"This site is run independently by the OSHITIVE+ Editorial Team,<br>a creative media team based in Indonesia."}
+};
+function setLang(l){
+  var d=T[l]||T.id;
+  document.documentElement.lang=l;
+  document.title=d.title;
+  document.querySelectorAll('[data-i18n]').forEach(function(e){e.textContent=d[e.getAttribute('data-i18n')]});
+  document.querySelectorAll('[data-i18n-html]').forEach(function(e){e.innerHTML=d[e.getAttribute('data-i18n-html')]});
+  document.getElementById('coopBtn').href='mailto:oshitive@gmail.com?subject='+encodeURIComponent(d.subj);
+  document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===l?'true':'false')});
+  try{localStorage.setItem('oshitive-lang',l)}catch(e){}
+}
+var saved=null;try{saved=localStorage.getItem('oshitive-lang')}catch(e){}
+var start=saved||((navigator.language||'id').toLowerCase().indexOf('id')===0?'id':'en');
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'))})});
+document.getElementById('y').textContent=new Date().getFullYear();
+setLang(T[start]?start:'id');
+</script>
+</body>
+</html>
